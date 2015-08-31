@@ -34,8 +34,7 @@ class Dashboard: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        fetchAllDocument()
-        reInitCollectionView()
+        loadDocuments()
         
         super.viewWillAppear(animated)
     }

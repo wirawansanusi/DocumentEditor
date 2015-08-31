@@ -116,7 +116,21 @@ class WSTextView: UITextView {
         return str
     }
     
+    func setSelectionIntoForm() {
+        
+        var textRange = selectedTextRange
+        
+        if textRange != nil {
+            
+            if textRange!.start != textRange!.end {
+                
+                println("text range start \(textRange!.start) againts \(textRange!.end)")
+            }
+        }
+    }
+    
     required init(coder aDecoder: NSCoder) {
+        
         fatalError("init(coder:) has not been implemented")
     }
 }

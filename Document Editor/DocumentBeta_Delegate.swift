@@ -58,7 +58,6 @@ extension DocumentBeta: WSTextViewDelegate {
                 pagesContent[nextIndex].appendIntoNextTextView(word, reverse: reverse)
             }
         }
-        
     }
     
     func WSTextViewWillReplaceText(textView: WSTextView, index: Int) {
@@ -74,7 +73,6 @@ extension DocumentBeta: WSTextViewDelegate {
                 return
             }
         }
-        
     }
 }
 
@@ -224,6 +222,7 @@ extension DocumentBeta: UITextViewDelegate {
     
     func textViewShouldBeginEditing(textView: UITextView) -> Bool {
 
+        menubarItem.rightBarButtonItems?.insert(formBtn!, atIndex: 0)
         menubarItem.rightBarButtonItems?.insert(doneBtn!, atIndex: 0)
         
         objectContextSaveType = 1
@@ -236,6 +235,8 @@ extension DocumentBeta: UITextViewDelegate {
     func textViewDidEndEditing(textView: UITextView) {
         
         saveObjectContext()
+        
+        menubarItem.rightBarButtonItems?.removeAtIndex(0)
         menubarItem.rightBarButtonItems?.removeAtIndex(0)
     }
 }

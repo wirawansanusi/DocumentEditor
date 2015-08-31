@@ -9,20 +9,26 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="pages" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Pages" inverseName="documents" inverseEntity="Pages" syncable="YES"/>
     </entity>
-    <entity name="PageImages" syncable="YES">
+    <entity name="PageImages" representedClassName="PageImages" syncable="YES">
+        <attribute name="backwardToggle" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="data" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="documentId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="pageIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="originX" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="originY" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="pageId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="sizeWidth" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="pages" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pages" inverseName="pageImages" inverseEntity="Pages" syncable="YES"/>
     </entity>
     <entity name="Pages" representedClassName="Pages" syncable="YES">
         <attribute name="documentId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="documents" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Documents" inverseName="pages" inverseEntity="Documents" syncable="YES"/>
+        <relationship name="pageImages" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="PageImages" inverseName="pages" inverseEntity="PageImages" syncable="YES"/>
     </entity>
     <elements>
         <element name="Documents" positionX="-63" positionY="-18" width="128" height="150"/>
-        <element name="Pages" positionX="-54" positionY="9" width="128" height="105"/>
-        <element name="PageImages" positionX="-54" positionY="45" width="128" height="90"/>
+        <element name="PageImages" positionX="-54" positionY="45" width="128" height="165"/>
+        <element name="Pages" positionX="-54" positionY="9" width="128" height="120"/>
     </elements>
 </model>

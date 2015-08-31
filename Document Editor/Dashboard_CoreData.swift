@@ -10,6 +10,12 @@ import UIKit
 
 extension Dashboard {
     
+    func loadDocuments() {
+        
+        fetchAllDocument()
+        reInitCollectionView()
+    }
+    
     func fetchAllDocument() {
         
         documents = Documents.MR_findAllSortedBy("order", ascending: true) as! [Documents]

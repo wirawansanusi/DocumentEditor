@@ -46,6 +46,43 @@ extension DocumentBeta {
         setDocumentThumbnailImage()
         
         CDDocument?.pages = CDPages
+
+        commitDB()
+    }
+    
+    func saveImagesContext() {
+        
+        //fetch by ID and delete all
+        for index in 0..<CDImages.count {
+            
+            let CDImage = CDImages[index] as! PageImages
+            CDImage.MR_deleteEntity()
+        }
+        
+        CDImages = NSMutableOrderedSet()
+        
+        if ssImagesView.count > 0 {
+            for index in 0..<ssImagesView.count {
+            
+                let imageView = ssImagesView[index]
+                let imageIndex = index
+            
+                CDImage = PageImages.MR_createEntity()
+                CDImage?.documentId = CDDocument!.id
+                CDImage?.pageId = pagesIndex[imageIndex]
+                CDImage?.backwardToggle = backwardsToggle[imageIndex]
+                CDImage?.data = UIImagePNGRepresentation(imageView.image)
+                CDImage?.originX = imageView.frame.origin.x
+                CDImage?.originY = imageView.frame.origin.y
+                CDImage?.sizeWidth = imageView.frame.size.width
+                CDImages.addObject(CDImage!)
+            }
+        }
+
+        CDPage?.pageImages = CDImages
+        
+        setDocumentDateAttribute(onInit: false)
+        setDocumentThumbnailImage()
         
         commitDB()
     }

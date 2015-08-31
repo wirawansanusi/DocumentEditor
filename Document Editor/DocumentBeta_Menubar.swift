@@ -40,6 +40,9 @@ extension DocumentBeta {
         scanBtn = UIBarButtonItem(image: UIImage(named: "Scan_Icon"), style: .Plain, target: self, action: Selector("didPressScanButton"))
         doneBtn?.tintColor = UIColor.whiteColor()
         
+        formBtn = UIBarButtonItem(image: UIImage(named: "Form_Icon"), style: .Plain, target: self, action: Selector("didPressFormButton"))
+        formBtn?.tintColor = UIColor.whiteColor()
+        
         doneBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: Selector("didPressDoneButton"))
         doneBtn?.tintColor = UIColor.whiteColor()
         

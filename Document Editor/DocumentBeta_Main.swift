@@ -33,6 +33,8 @@ class DocumentBeta: UIViewController {
     var CDDocument: Documents?
     var CDPages: NSMutableOrderedSet = NSMutableOrderedSet()
     var CDPage: Pages?
+    var CDImages: NSMutableOrderedSet = NSMutableOrderedSet()
+    var CDImage: PageImages?
     
     var documentId: NSNumber?
     
@@ -56,6 +58,7 @@ class DocumentBeta: UIViewController {
     var deleteImage:   UIBarButtonItem?
     var webViewBtn:    UIBarButtonItem?
     var scanBtn:       UIBarButtonItem?
+    var formBtn:       UIBarButtonItem?
     var doneBtn:       UIBarButtonItem?
     var saveBtn:       UIBarButtonItem?
     
@@ -83,44 +86,4 @@ class DocumentBeta: UIViewController {
     var currentImageView: UIImageView?
     var pagesIndex = [Int]()
     var backwardsToggle = [Int]()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        initContainerWrapper()
-        initNotificationSettings()
-        
-        if let id = showID {
-            fetchObjectContext(id)
-            for pageContent in pagesContent {
-                let index = pageContent.tag
-                updateSetting(index)
-            }
-        } else {
-            updateSetting(nil)
-            initObjectContext()
-        }
-        
-        initMenubar()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        initNavbarGradient()
-        if !menubarHasPlayed {
-            showMenubar()
-            menubarHasPlayed = true
-        }
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        removeNotificationSettings()
-        
-        return super.viewWillDisappear(animated)
-    }
-    
-    func initContainerWrapper() {
-        containerWrapper.frame = CGRect(origin: CGPointZero, size: view.frame.size)
-    }
 }

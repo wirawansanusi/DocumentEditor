@@ -31,5 +31,26 @@ extension DocumentBeta {
     func updateContainerWrapper() {
         
         containerWrapper.contentSize = CGSize(width: containerWrapper.frame.width, height: CGFloat(pagesContent.count) * pageSize.height)
+        
+        if ssImagesView.count > 0 {
+            attachImage()
+        }
+    }
+    
+    func attachImage() {
+        
+        println(ssImagesView.count)
+    
+        for index in 0..<ssImagesView.count {
+            
+            let imageView = ssImagesView[index]
+            let pageIndex = pagesIndex[index]
+            let backwardToggle = backwardsToggle[index]
+            
+            initTapRecognizer(imageView)
+            initPanRecognizer(imageView)
+            pagesContent[pageIndex].addSubview(imageView)
+            checkToggleState(backwardToggle)
+        }
     }
 }

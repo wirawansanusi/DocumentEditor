@@ -34,11 +34,13 @@ extension Dashboard {
     
     @IBAction func unwindFromNewDocument(segue: UIStoryboardSegue) {
         
+        loadDocuments()
         collectionView.reloadData()
     }
 
     @IBAction func unwindFromDocumentBeta(segue: UIStoryboardSegue) {
         
+        loadDocuments()
         collectionView.reloadData()
     }
 }

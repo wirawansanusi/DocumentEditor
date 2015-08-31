@@ -12,6 +12,8 @@ extension DocumentBeta {
     
     func didPressPreviousButton() {
         
+        saveImagesContext()
+        
         if let textView = currentTextView {
             textView.resignFirstResponder()
         }
@@ -50,6 +52,12 @@ extension DocumentBeta {
     func didPressScanButton() {
         
         performSegueWithIdentifier("showScanController", sender: self)
+    }
+    
+    func didPressFormButton() {
+        
+        let wsTextView = currentTextView as! WSTextView
+        wsTextView.setSelectionIntoForm()
     }
     
     func saveChanges() {
