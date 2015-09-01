@@ -28,13 +28,13 @@ class WSTextView: UITextView {
             appendedText = String(text) + String(word)
         }
         
-        //let appendedText = (word as String) + text
+        // let appendedText = (word as String) + text
         self.text = String(appendedText)
         
-//        println(count(self.text))
-//        if reverse && count(self.text) != 0{
-//            text.substringFromIndex(count(self.text) - 1)
-//        }
+        // println(count(self.text))
+        // if reverse && count(self.text) != 0{
+        // text.substringFromIndex(count(self.text) - 1)
+        // }
     }
     
     func checkCaretPosition(frame: CGRect) -> Bool {
@@ -114,19 +114,6 @@ class WSTextView: UITextView {
         wsDelegate?.WSTextViewWillReplaceText(self, index: tag)
         
         return str
-    }
-    
-    func setSelectionIntoForm() {
-        
-        var textRange = selectedTextRange
-        
-        if textRange != nil {
-            
-            if textRange!.start != textRange!.end {
-                
-                println("text range start \(textRange!.start) againts \(textRange!.end)")
-            }
-        }
     }
     
     required init(coder aDecoder: NSCoder) {

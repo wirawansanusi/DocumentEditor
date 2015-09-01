@@ -33,11 +33,19 @@ extension DocumentBeta {
         
         CDPage?.documentId = CDDocument!.id
         CDPage?.id = 1
-        CDPage?.text = ""
+        CDPage?.text = initBlankTextViewData()
         
         CDPages.addObject(CDPage!)
         CDDocument?.pages = CDPages
         
         commitDB()
+    }
+    
+    func initBlankTextViewData() -> NSData {
+        
+        let textView = UITextView()
+        let data = convertAttrTextIntoData(textView)
+        
+        return data
     }
 }

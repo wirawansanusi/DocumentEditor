@@ -58,6 +58,7 @@ class DocumentBeta: UIViewController {
     var deleteImage:   UIBarButtonItem?
     var webViewBtn:    UIBarButtonItem?
     var scanBtn:       UIBarButtonItem?
+    var unformBtn:     UIBarButtonItem?
     var formBtn:       UIBarButtonItem?
     var doneBtn:       UIBarButtonItem?
     var saveBtn:       UIBarButtonItem?

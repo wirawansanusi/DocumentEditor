@@ -32,4 +32,14 @@ extension Dashboard {
         
         presentViewController(destination, animated: true, completion: nil)
     }
+    
+    @IBAction func didPressDeleteDocumentButton(sender: AnyObject) {
+        
+        documents[currentIndexPath!.row].MR_deleteEntity()
+        commitDB()
+        
+        documents.removeAtIndex(currentIndexPath!.row)
+        collectionView.deleteItemsAtIndexPaths([currentIndexPath!])
+        collectionView.reloadData()
+    }
 }

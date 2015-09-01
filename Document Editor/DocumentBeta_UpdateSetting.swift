@@ -39,7 +39,6 @@ extension DocumentBeta {
     
     func attachImage() {
         
-        println(ssImagesView.count)
     
         for index in 0..<ssImagesView.count {
             

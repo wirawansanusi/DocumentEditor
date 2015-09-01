@@ -57,7 +57,7 @@ extension DocumentBeta {
     func didPressFormButton() {
         
         let wsTextView = currentTextView as! WSTextView
-        wsTextView.setSelectionIntoForm()
+        wsTextView.checkSelectionIntoForm()
     }
     
     func saveChanges() {

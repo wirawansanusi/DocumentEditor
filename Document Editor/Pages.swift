@@ -2,7 +2,7 @@
 //  Pages.swift
 //  Document Editor
 //
-//  Created by wirawan sanusi on 8/29/15.
+//  Created by wirawan sanusi on 8/31/15.
 //  Copyright (c) 2015 wirawan sanusi. All rights reserved.
 //
 
@@ -15,7 +15,7 @@ class Pages: NSManagedObject {
 
     @NSManaged var documentId: NSNumber
     @NSManaged var id: NSNumber
-    @NSManaged var text: String
+    @NSManaged var text: NSData
     @NSManaged var documents: Documents
     @NSManaged var pageImages: NSOrderedSet
 

@@ -22,7 +22,7 @@
     <entity name="Pages" representedClassName="Pages" syncable="YES">
         <attribute name="documentId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="Binary" syncable="YES"/>
         <relationship name="documents" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Documents" inverseName="pages" inverseEntity="Documents" syncable="YES"/>
         <relationship name="pageImages" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="PageImages" inverseName="pages" inverseEntity="PageImages" syncable="YES"/>
     </entity>

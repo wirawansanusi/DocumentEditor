@@ -21,8 +21,9 @@
       "scale" : "3x"
     },
     {
-      "idiom" : "iphone",
       "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "auto write icon.png",
       "scale" : "2x"
     },
     {
@@ -51,8 +52,9 @@
       "scale" : "2x"
     },
     {
-      "idiom" : "ipad",
       "size" : "76x76",
+      "idiom" : "ipad",
+      "filename" : "auto write icon-1.png",
       "scale" : "1x"
     },
     {

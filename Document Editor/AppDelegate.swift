@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         MagicalRecord.setupCoreDataStackWithStoreNamed("Document_Editor")
+        Parse.setApplicationId("VrZQFPMrHpelCHpbSjsHbR8mvKriRrL93rPtSbiK", clientKey: "ukyOLb6HfXKWIfJspYspGmGdwz21uKxxUaB7zl76")
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
         
         //println("app dir: %@", NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).last)

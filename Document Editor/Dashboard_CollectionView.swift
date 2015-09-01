@@ -67,4 +67,14 @@ extension Dashboard: UICollectionViewDelegate, UICollectionViewDataSource {
                 self.performSegueWithIdentifier("showDocumentDetail", sender: self)
         }
     }
+    
+    func hideCollectionViewCellOption(indexPath: NSIndexPath) {
+        
+        let cell = self.collectionView.cellForItemAtIndexPath(indexPath) as! Dashboard_CollectionCell
+        
+        UIView.animateWithDuration(1.0, animations: { () -> Void in
+            
+            cell.info.alpha = 0
+        })
+    }
 }

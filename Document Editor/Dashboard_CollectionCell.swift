@@ -12,4 +12,7 @@ class Dashboard_CollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var thumbnail: UIImageView!
     @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var info: UIView!
+    @IBOutlet weak var deleteDocumentButton: UIButton!
+    
 }

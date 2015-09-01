@@ -30,6 +30,8 @@ extension DocumentBeta {
         textView.scrollEnabled = false
         textView.wsDelegate = self
         textView.delegate = self
+        initTapRecognizerTextView(textView)
+        
         pageContent = textView
         
         return textView

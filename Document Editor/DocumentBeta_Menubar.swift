@@ -43,6 +43,9 @@ extension DocumentBeta {
         formBtn = UIBarButtonItem(image: UIImage(named: "Form_Icon"), style: .Plain, target: self, action: Selector("didPressFormButton"))
         formBtn?.tintColor = UIColor.whiteColor()
         
+        unformBtn = UIBarButtonItem(image: UIImage(named: "Unform_Icon"), style: .Plain, target: self, action: Selector("didPressUnformButton"))
+        unformBtn?.tintColor = UIColor.whiteColor()
+        
         doneBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: Selector("didPressDoneButton"))
         doneBtn?.tintColor = UIColor.whiteColor()
         

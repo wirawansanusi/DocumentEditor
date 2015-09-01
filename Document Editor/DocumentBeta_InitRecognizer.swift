@@ -33,4 +33,13 @@ extension DocumentBeta {
         image.userInteractionEnabled = true
         image.addGestureRecognizer(recognizer)
     }
+    
+    func initTapRecognizerTextView(textView: WSTextView) {
+    
+        let recognizer = UITapGestureRecognizer(target: self, action: Selector("tapTextView:"))
+        
+        recognizer.numberOfTapsRequired = 1
+        
+        textView.addGestureRecognizer(recognizer)
+    }
 }

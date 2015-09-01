@@ -18,12 +18,14 @@ class Dashboard: UIViewController {
     var selectedDocumentID: Int?
     
     var viewMargin: CGFloat = 20.0
+    var currentIndexPath: NSIndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         initCollectionViewConfiguration()
+        initLongPressRecognizer()
     }
     
     override func viewDidLayoutSubviews() {

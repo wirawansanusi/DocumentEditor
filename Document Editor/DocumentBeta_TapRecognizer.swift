@@ -26,4 +26,10 @@ extension DocumentBeta {
             }
         }
     }
+    
+    func tapTextView(recognizer: UITapGestureRecognizer) {
+        
+        let wsTextView = recognizer.view as! WSTextView
+        wsTextView.checkFormSelectionState(recognizer)
+    }
 }

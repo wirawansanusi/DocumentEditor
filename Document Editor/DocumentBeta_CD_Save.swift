@@ -32,7 +32,8 @@ extension DocumentBeta {
             }
             CDPage?.documentId = CDDocument!.id
             CDPage?.id = index + 1
-            CDPage?.text = pagesContent[index].text
+            // CDPage?.text = pagesContent[index].text
+            CDPage?.text = convertAttrTextIntoData(pagesContent[index])
             CDPages.addObject(CDPage!)
         }
     

@@ -39,7 +39,6 @@ extension DocumentBeta {
         
         let textView = pagesContent.last
         let image = UIImage.imageWithImage(ssImage!, scaleToWidth: textView!.frame.width - 20.0)
-        println("after segue \(image.size)")
         let imageView = UIImageView(image: image)
         let index = ssImagesView.count
         

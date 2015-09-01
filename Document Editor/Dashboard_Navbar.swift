@@ -15,6 +15,7 @@ extension Dashboard {
         let gradient = CAGradientLayer()
         gradient.frame = navbar.bounds
         gradient.colors = [ColorsPallete.orangeLight().CGColor, ColorsPallete.orangeDark().CGColor]
+        
         navbar.layer.insertSublayer(gradient, atIndex: UInt32(0))
     }
 }

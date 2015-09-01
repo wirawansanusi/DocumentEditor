@@ -20,7 +20,7 @@ extension DocumentBeta {
             
             let frame = CGRect(origin: CGPointZero, size: pageSize)
             let textView = WSTextView(frame: frame)
-            textView.text = text
+            textView.attributedText = convertDataIntoAttrText(CDPage.text)
             
             
             pageContent = initWSTextView(textView)
@@ -40,7 +40,6 @@ extension DocumentBeta {
         for CDImage in CDImages {
             
             let rawImage = UIImage(data: CDImage.data)
-            println("after fetch \(rawImage!.size)")
             let image = UIImage.imageWithImage(rawImage!, scaleToWidth: CDImage.sizeWidth as CGFloat)
             let originX = CDImage.originX as CGFloat
             let originY = CDImage.originY as CGFloat
