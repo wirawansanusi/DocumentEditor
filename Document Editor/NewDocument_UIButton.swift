@@ -26,6 +26,7 @@ extension NewDocument {
             }) { (completed: Bool) -> Void in
                 
                 let destination = self.storyboard?.instantiateViewControllerWithIdentifier("Document") as! DocumentBeta
+                destination.user = self.user
                 
                 self.presentViewController(destination, animated: false, completion: nil)
         }

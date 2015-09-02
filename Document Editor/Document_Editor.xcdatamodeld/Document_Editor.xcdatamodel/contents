@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Documents" representedClassName="Documents" syncable="YES">
+        <attribute name="authorId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateCreated" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="lastUpdated" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="thumbnail" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="pages" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Pages" inverseName="documents" inverseEntity="Pages" syncable="YES"/>
+    </entity>
+    <entity name="Groups" representedClassName="PRODUCT_MODULE_NAME.Groups" syncable="YES">
+        <attribute name="dateCreated" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateJoined" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="thumbnail" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="PageImages" representedClassName="PageImages" syncable="YES">
         <attribute name="backwardToggle" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -27,8 +36,9 @@
         <relationship name="pageImages" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="PageImages" inverseName="pages" inverseEntity="PageImages" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Documents" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="Documents" positionX="-63" positionY="-18" width="128" height="180"/>
         <element name="PageImages" positionX="-54" positionY="45" width="128" height="165"/>
         <element name="Pages" positionX="-54" positionY="9" width="128" height="120"/>
+        <element name="Groups" positionX="-45" positionY="81" width="128" height="120"/>
     </elements>
 </model>

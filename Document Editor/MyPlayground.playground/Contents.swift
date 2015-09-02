@@ -2,11 +2,8 @@
 
 import UIKit
 
-var textView = UITextView(frame: CGRect(origin: CGPointZero, size: CGSize(width: 200.0, height: 200.0)))
+let email = "asdasd@gmail.com"
+let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
 
-let array = [1]
-UInt(array.count - 1)
-
-
-var items = [AnyObject?]() //Int
-items.append(5)
+predicate.evaluateWithObject(email)

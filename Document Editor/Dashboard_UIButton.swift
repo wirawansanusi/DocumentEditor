@@ -12,12 +12,17 @@ extension Dashboard {
     
     func initCreateDocumentBtn() {
         
-        createDocumentBtn.frame = CGRectMake(view.frame.width - createDocumentBtn.frame.width - viewMargin, view.frame.height - createDocumentBtn.frame.height - viewMargin, createDocumentBtn.frame.width, createDocumentBtn.frame.height)
+        createDocumentBtn.frame = CGRectMake(view.frame.width - createDocumentBtn.frame.width - viewMargin, view.frame.height - createDocumentBtn.frame.height - viewMargin - 55, createDocumentBtn.frame.width, createDocumentBtn.frame.height)
         createDocumentBtn.layer.cornerRadius = 38
         createDocumentBtn.layer.shadowColor = UIColor.blackColor().CGColor
         createDocumentBtn.layer.shadowOpacity = 0.5
         createDocumentBtn.layer.shadowRadius = 2.0
         createDocumentBtn.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+    }
+    
+    @IBAction func didPressUserButton(sender: AnyObject) {
+        
+        showActionSheetUserMenu()
     }
 
     @IBAction func didPressNewDocumentButton(sender: AnyObject) {
@@ -29,6 +34,7 @@ extension Dashboard {
         
         destination.view.backgroundColor = UIColor.clearColor()
         destination.view.insertSubview(blurEffectView, atIndex: 0)
+        destination.user = user
         
         presentViewController(destination, animated: true, completion: nil)
     }

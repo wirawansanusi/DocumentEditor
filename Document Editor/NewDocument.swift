@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Parse
 
 class NewDocument: UIViewController, WSPagePreviewDelegate {
+    
+    var user: PFUser!
     
     @IBOutlet weak var scrollView: UIScrollView!
     var pagePreview: WSPagePreview?

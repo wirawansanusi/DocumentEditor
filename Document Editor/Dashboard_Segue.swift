@@ -25,10 +25,17 @@ extension Dashboard {
             destination.modalPresentationStyle = UIModalPresentationStyle.CurrentContext
             
             //presentViewController(destination, animated: true, completion: nil)
+            
         } else if segue.identifier == "showDocumentDetail" {
             
             let destination = segue.destinationViewController as! DocumentBeta
             destination.showID = selectedDocumentID
+            
+        } else if segue.identifier == "unwindFromDashboard" {
+            
+            let destination = segue.destinationViewController as! Login
+            destination.usernameField.text = ""
+            destination.passwordField.text = ""
         }
     }
     

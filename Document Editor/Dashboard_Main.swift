@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import Parse
 
 class Dashboard: UIViewController {
     
+    @IBOutlet weak var menubarWrapper: UINavigationBar!
     @IBOutlet weak var createDocumentBtn: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var navbar: UIView!
+    
+    var user: PFUser!
     
     var documents = [Documents]()
     var selectedDocumentID: Int?
@@ -22,8 +26,8 @@ class Dashboard: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        initMenubar()
         initCollectionViewConfiguration()
         initLongPressRecognizer()
     }

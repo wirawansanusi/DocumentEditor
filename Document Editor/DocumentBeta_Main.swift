@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class DocumentBeta: UIViewController {
     
@@ -30,6 +31,7 @@ class DocumentBeta: UIViewController {
     
     var objectContextSaveType = 0
     
+    var user: PFUser!
     var CDDocument: Documents?
     var CDPages: NSMutableOrderedSet = NSMutableOrderedSet()
     var CDPage: Pages?

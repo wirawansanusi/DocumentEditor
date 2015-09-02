@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import Parse
 
 extension Dashboard {
     
     func fetchAllDocument() {
         
-        documents = Documents.MR_findAllSortedBy("order", ascending: true) as! [Documents]
+        let userId = user.objectId
+        let predicate = NSPredicate(format: "userId IN %@", [userId!])
+        documents = Documents.MR_findAllSortedBy("order", ascending: true, withPredicate: predicate) as! [Documents]
     }
 }

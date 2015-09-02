@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 extension DocumentBeta {
     
@@ -15,15 +16,16 @@ extension DocumentBeta {
         // Document
         
         CDDocument = Documents.MR_createEntity()
-        
-        
+    
         let id = Documents.MR_numberOfEntities()
         documentId = id
         
         CDDocument!.id = documentId!
         CDDocument!.order = documentId!
-        
+        CDDocument!.authorId = user.objectId!
+        CDDocument!.userId = user.objectId!
         CDDocument!.title = "Untitled Document \(Int(documentId!))"
+        
         setDocumentDateAttribute(onInit: true)
         setDocumentThumbnailImage()
         

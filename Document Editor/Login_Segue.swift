@@ -11,7 +11,22 @@ import UIKit
 extension Login {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "showDashboard" {
+            
+            let tabBarController = segue.destinationViewController as! UITabBarController
+            let destination = tabBarController.viewControllers![0] as! Dashboard
+            destination.user = currentUser
+        }
+    }
+    
+    @IBAction func unwindFromRegister(segue: UIStoryboardSegue) {
+        
+        // nothing to do here
+    }
+    
+    @IBAction func unwindFromDashboard(segue: UIStoryboardSegue) {
+        
+        // nothing to do here
     }
 }
