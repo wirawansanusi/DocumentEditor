@@ -76,6 +76,21 @@
 		9944FDF81B96F30C00965298 /* NewGroup_Navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944FDF71B96F30C00965298 /* NewGroup_Navbar.swift */; };
 		9944FDFA1B96F3EC00965298 /* Group_MenubarAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944FDF91B96F3EC00965298 /* Group_MenubarAction.swift */; };
 		9944FDFC1B96F48B00965298 /* NewGroup_MenubarAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944FDFB1B96F48B00965298 /* NewGroup_MenubarAction.swift */; };
+		9944FDFE1B97FF0600965298 /* NewGroup_InitRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944FDFD1B97FF0600965298 /* NewGroup_InitRecognizer.swift */; };
+		9944FE001B97FFA000965298 /* NewGroup_TapRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944FDFF1B97FFA000965298 /* NewGroup_TapRecognizer.swift */; };
+		9944FE021B98002800965298 /* NewGroup_ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944FE011B98002800965298 /* NewGroup_ImagePicker.swift */; };
+		9944FE061B9800F200965298 /* NewGroup_UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944FE051B9800F200965298 /* NewGroup_UIImage.swift */; };
+		9944FE081B9801AB00965298 /* NewGroup_UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944FE071B9801AB00965298 /* NewGroup_UITextField.swift */; };
+		9944FE0A1B9803A100965298 /* NewGroup_UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944FE091B9803A100965298 /* NewGroup_UITextView.swift */; };
+		9944FE0E1B9811E600965298 /* NewGroup_NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944FE0D1B9811E600965298 /* NewGroup_NotificationCenter.swift */; };
+		9944FE101B98144D00965298 /* NewGroup_FormSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944FE0F1B98144D00965298 /* NewGroup_FormSubmit.swift */; };
+		9944FE121B98146700965298 /* NewGroup_Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944FE111B98146700965298 /* NewGroup_Alert.swift */; };
+		9944FE141B9815FA00965298 /* NewGroup_Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944FE131B9815FA00965298 /* NewGroup_Validation.swift */; };
+		9944FE161B981B3700965298 /* NewGroup_GroupAttr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944FE151B981B3700965298 /* NewGroup_GroupAttr.swift */; };
+		9944FE1A1B982EB000965298 /* Group_Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944FE191B982EB000965298 /* Group_Fetch.swift */; };
+		9944FE1D1B98303E00965298 /* NewGroup_Save.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944FE1C1B98303E00965298 /* NewGroup_Save.swift */; };
+		9944FE1F1B98417C00965298 /* Group_Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944FE1E1B98417C00965298 /* Group_Load.swift */; };
+		9944FE211B98469D00965298 /* Dashboard_LongPressRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944FE201B98469D00965298 /* Dashboard_LongPressRecognizer.swift */; };
 		99507F231B91A3DF00FBA8F9 /* DocumentBeta_MainInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99507F221B91A3DF00FBA8F9 /* DocumentBeta_MainInit.swift */; };
 		9971F0581B8D6B85004DCE81 /* WebView_Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9971F0571B8D6B85004DCE81 /* WebView_Main.swift */; };
 		9971F05A1B8D6BA3004DCE81 /* WebView_Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9971F0591B8D6BA3004DCE81 /* WebView_Segue.swift */; };
@@ -261,6 +276,21 @@
 		9944FDF71B96F30C00965298 /* NewGroup_Navbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroup_Navbar.swift; sourceTree = "<group>"; };
 		9944FDF91B96F3EC00965298 /* Group_MenubarAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group_MenubarAction.swift; sourceTree = "<group>"; };
 		9944FDFB1B96F48B00965298 /* NewGroup_MenubarAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroup_MenubarAction.swift; sourceTree = "<group>"; };
+		9944FDFD1B97FF0600965298 /* NewGroup_InitRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroup_InitRecognizer.swift; sourceTree = "<group>"; };
+		9944FDFF1B97FFA000965298 /* NewGroup_TapRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroup_TapRecognizer.swift; sourceTree = "<group>"; };
+		9944FE011B98002800965298 /* NewGroup_ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroup_ImagePicker.swift; sourceTree = "<group>"; };
+		9944FE051B9800F200965298 /* NewGroup_UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroup_UIImage.swift; sourceTree = "<group>"; };
+		9944FE071B9801AB00965298 /* NewGroup_UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroup_UITextField.swift; sourceTree = "<group>"; };
+		9944FE091B9803A100965298 /* NewGroup_UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroup_UITextView.swift; sourceTree = "<group>"; };
+		9944FE0D1B9811E600965298 /* NewGroup_NotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroup_NotificationCenter.swift; sourceTree = "<group>"; };
+		9944FE0F1B98144D00965298 /* NewGroup_FormSubmit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroup_FormSubmit.swift; sourceTree = "<group>"; };
+		9944FE111B98146700965298 /* NewGroup_Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroup_Alert.swift; sourceTree = "<group>"; };
+		9944FE131B9815FA00965298 /* NewGroup_Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroup_Validation.swift; sourceTree = "<group>"; };
+		9944FE151B981B3700965298 /* NewGroup_GroupAttr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroup_GroupAttr.swift; sourceTree = "<group>"; };
+		9944FE191B982EB000965298 /* Group_Fetch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group_Fetch.swift; sourceTree = "<group>"; };
+		9944FE1C1B98303E00965298 /* NewGroup_Save.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroup_Save.swift; sourceTree = "<group>"; };
+		9944FE1E1B98417C00965298 /* Group_Load.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group_Load.swift; sourceTree = "<group>"; };
+		9944FE201B98469D00965298 /* Dashboard_LongPressRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dashboard_LongPressRecognizer.swift; sourceTree = "<group>"; };
 		99507F221B91A3DF00FBA8F9 /* DocumentBeta_MainInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentBeta_MainInit.swift; sourceTree = "<group>"; };
 		9971F0571B8D6B85004DCE81 /* WebView_Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView_Main.swift; sourceTree = "<group>"; };
 		9971F0591B8D6BA3004DCE81 /* WebView_Segue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView_Segue.swift; sourceTree = "<group>"; };
@@ -539,6 +569,7 @@
 		9944FDDE1B96E6BB00965298 /* Group */ = {
 			isa = PBXGroup;
 			children = (
+				9944FE181B982E4E00965298 /* Parse */,
 				9944FDEC1B96F05700965298 /* Model */,
 				9944FDE51B96E8EE00965298 /* Menubar */,
 				9944FDDF1B96E6E700965298 /* Group_Main.swift */,
@@ -570,9 +601,21 @@
 		9944FDEF1B96F1BE00965298 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				9944FE1B1B98303100965298 /* Parse */,
+				9944FE171B981B4E00965298 /* Group Attribute */,
 				9944FDF41B96F2D800965298 /* Menubar */,
 				9944FDF01B96F1E900965298 /* NewGroup_Main.swift */,
 				9944FDF71B96F30C00965298 /* NewGroup_Navbar.swift */,
+				9944FE011B98002800965298 /* NewGroup_ImagePicker.swift */,
+				9944FE051B9800F200965298 /* NewGroup_UIImage.swift */,
+				9944FE071B9801AB00965298 /* NewGroup_UITextField.swift */,
+				9944FE091B9803A100965298 /* NewGroup_UITextView.swift */,
+				9944FE131B9815FA00965298 /* NewGroup_Validation.swift */,
+				9944FE0F1B98144D00965298 /* NewGroup_FormSubmit.swift */,
+				9944FE0D1B9811E600965298 /* NewGroup_NotificationCenter.swift */,
+				9944FDFD1B97FF0600965298 /* NewGroup_InitRecognizer.swift */,
+				9944FDFF1B97FFA000965298 /* NewGroup_TapRecognizer.swift */,
+				9944FE111B98146700965298 /* NewGroup_Alert.swift */,
 				9944FDF21B96F20000965298 /* NewGroup_Segue.swift */,
 			);
 			name = "New Group";
@@ -585,6 +628,31 @@
 				9944FDFB1B96F48B00965298 /* NewGroup_MenubarAction.swift */,
 			);
 			name = Menubar;
+			sourceTree = "<group>";
+		};
+		9944FE171B981B4E00965298 /* Group Attribute */ = {
+			isa = PBXGroup;
+			children = (
+				9944FE151B981B3700965298 /* NewGroup_GroupAttr.swift */,
+			);
+			name = "Group Attribute";
+			sourceTree = "<group>";
+		};
+		9944FE181B982E4E00965298 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				9944FE1E1B98417C00965298 /* Group_Load.swift */,
+				9944FE191B982EB000965298 /* Group_Fetch.swift */,
+			);
+			name = Parse;
+			sourceTree = "<group>";
+		};
+		9944FE1B1B98303100965298 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				9944FE1C1B98303E00965298 /* NewGroup_Save.swift */,
+			);
+			name = Parse;
 			sourceTree = "<group>";
 		};
 		9971F0541B8D63B0004DCE81 /* WSTextView */ = {
@@ -927,6 +995,7 @@
 				99F05C281B6F2198006AD235 /* Dashboard_Segue.swift */,
 				994444901B96CE7D00FFC821 /* Dashboard_ActionSheet.swift */,
 				994006911B91D59A0040683E /* Dashboard_InitRecognizer.swift */,
+				9944FE201B98469D00965298 /* Dashboard_LongPressRecognizer.swift */,
 			);
 			name = Dashboard;
 			sourceTree = "<group>";
@@ -1079,11 +1148,13 @@
 				993B537F1B91878100AC30B5 /* WSPagePreview_Delegate.swift in Sources */,
 				993B53891B91878100AC30B5 /* WSPagePreview.swift in Sources */,
 				9928A0581B96B8FE000C150F /* Register_Validation.swift in Sources */,
+				9944FE081B9801AB00965298 /* NewGroup_UITextField.swift in Sources */,
 				9971F0711B8D9A94004DCE81 /* ScreenshotEditor_Init.swift in Sources */,
 				993B53671B91867500AC30B5 /* WSPage_LayoutManager.swift in Sources */,
 				9971F0D81B94102B004DCE81 /* WSTextView_FormSelection.swift in Sources */,
 				9944FDDB1B96DDA400965298 /* PageImages.swift in Sources */,
 				99DD3A061B8C2D9600C449CC /* ScanEditor_LanguageContainerMenubar.swift in Sources */,
+				9944FE211B98469D00965298 /* Dashboard_LongPressRecognizer.swift in Sources */,
 				99DD399C1B85825F00C449CC /* DocumentBeta_Main.swift in Sources */,
 				9944448D1B96C97B00FFC821 /* Login_NSUD_Get.swift in Sources */,
 				99DD39CA1B872C0A00C449CC /* DocumentBeta_CD_Save.swift in Sources */,
@@ -1107,6 +1178,7 @@
 				9971F0691B8D815D004DCE81 /* ScreenshotEditor_Main.swift in Sources */,
 				994444961B96D18600FFC821 /* Dashboard_NSUD_Delete.swift in Sources */,
 				9971F06B1B8D829D004DCE81 /* ScreenshotEditor_Segue.swift in Sources */,
+				9944FE021B98002800965298 /* NewGroup_ImagePicker.swift in Sources */,
 				99F29FB71B69E39100A1B480 /* DocumentEditor_NavigationController.swift in Sources */,
 				993B53851B91878100AC30B5 /* WSPagePreview_Size.swift in Sources */,
 				99DD39951B818A1F00C449CC /* DocumentBeta_Notification.swift in Sources */,
@@ -1128,9 +1200,11 @@
 				99DD39C41B872A4A00C449CC /* DocumentBeta_CD_Init.swift in Sources */,
 				99DD39C11B8722AE00C449CC /* DocumentBeta_DocumentTitle.swift in Sources */,
 				9971F05A1B8D6BA3004DCE81 /* WebView_Segue.swift in Sources */,
+				9944FE121B98146700965298 /* NewGroup_Alert.swift in Sources */,
 				9944448A1B96C86000FFC821 /* Login_TapRecognizer.swift in Sources */,
 				994444841B96C72800FFC821 /* Login_Validation.swift in Sources */,
 				99DD39B11B85A2F100C449CC /* Dashboard_CD_Fetch.swift in Sources */,
+				9944FE1F1B98417C00965298 /* Group_Load.swift in Sources */,
 				99DD39991B818B6500C449CC /* DocumentBeta_Init.swift in Sources */,
 				9944FDF61B96F2F200965298 /* NewGroup_Menubar.swift in Sources */,
 				9971F0E51B95A268004DCE81 /* Dashboard_CD_Commit.swift in Sources */,
@@ -1151,8 +1225,10 @@
 				9944FDFA1B96F3EC00965298 /* Group_MenubarAction.swift in Sources */,
 				9944FDDD1B96DDA400965298 /* Pages.swift in Sources */,
 				993B536A1B91867500AC30B5 /* WSPage_Setup.swift in Sources */,
+				9944FDFE1B97FF0600965298 /* NewGroup_InitRecognizer.swift in Sources */,
 				9971F1121B95AA86004DCE81 /* Login_Segue.swift in Sources */,
 				9928A0501B96B454000C150F /* Register_Main.swift in Sources */,
+				9944FE061B9800F200965298 /* NewGroup_UIImage.swift in Sources */,
 				99DD39D31B8AFBC500C449CC /* ScanEditor_Menubar.swift in Sources */,
 				9971F0801B8F2787004DCE81 /* ScreenshotResult_Segue.swift in Sources */,
 				993B53831B91878100AC30B5 /* WSPagePreview_PageControl.swift in Sources */,
@@ -1172,21 +1248,28 @@
 				9971F09F1B90799A004DCE81 /* DocumentBeta_MenubarActions.swift in Sources */,
 				9971F0991B90396A004DCE81 /* DocumentBeta_RecognizerDelegate.swift in Sources */,
 				9971F07B1B8ED2CE004DCE81 /* ScreenshotEditor_StylePanRecognizer.swift in Sources */,
+				9944FE101B98144D00965298 /* NewGroup_FormSubmit.swift in Sources */,
 				9928A0541B96B599000C150F /* Register_UIButton.swift in Sources */,
 				9971F05C1B8D6C0D004DCE81 /* WebView_WKWebView.swift in Sources */,
 				9971F0581B8D6B85004DCE81 /* WebView_Main.swift in Sources */,
 				993B53641B91867500AC30B5 /* WSPage_Delegate.swift in Sources */,
 				99DD39C81B872BD500C449CC /* DocumentBeta_CD_Fetch.swift in Sources */,
 				99DD3A011B8C281800C449CC /* ScanEditor_LanguageContainer.swift in Sources */,
+				9944FE141B9815FA00965298 /* NewGroup_Validation.swift in Sources */,
 				9971F08F1B902089004DCE81 /* DocumentBeta_UIImageExtension.swift in Sources */,
 				9944FDEB1B96EA9900965298 /* Group_CollectionCell.swift in Sources */,
 				9971F0A11B907D0C004DCE81 /* DocumentBeta_BackwardsToggle.swift in Sources */,
+				9944FE1A1B982EB000965298 /* Group_Fetch.swift in Sources */,
+				9944FE0E1B9811E600965298 /* NewGroup_NotificationCenter.swift in Sources */,
 				9971F05E1B8D6E36004DCE81 /* WebView_URLRequest.swift in Sources */,
+				9944FE001B97FFA000965298 /* NewGroup_TapRecognizer.swift in Sources */,
 				99F05C271B6F1D79006AD235 /* NewDocument_Segue.swift in Sources */,
 				99DD39D51B8AFC4700C449CC /* ScanEditor_Segue.swift in Sources */,
 				9971F0931B9023CB004DCE81 /* DocumentBeta_PanRecognizer.swift in Sources */,
 				994444861B96C77400FFC821 /* Login_UITextField.swift in Sources */,
+				9944FE1D1B98303E00965298 /* NewGroup_Save.swift in Sources */,
 				994444911B96CE7D00FFC821 /* Dashboard_ActionSheet.swift in Sources */,
+				9944FE161B981B3700965298 /* NewGroup_GroupAttr.swift in Sources */,
 				9928A04D1B96B3E5000C150F /* Login_UIButton.swift in Sources */,
 				993B538B1B9187C900AC30B5 /* WSPagePreview_ContainerMargin.swift in Sources */,
 				994006921B91D59A0040683E /* Dashboard_InitRecognizer.swift in Sources */,
@@ -1204,6 +1287,7 @@
 				9944449B1B96D9FD00FFC821 /* DocumentEditor_TabBarController.swift in Sources */,
 				993B53691B91867500AC30B5 /* WSPage_Page.swift in Sources */,
 				9971F0971B90363E004DCE81 /* DocumentBeta_TapRecognizer.swift in Sources */,
+				9944FE0A1B9803A100965298 /* NewGroup_UITextView.swift in Sources */,
 				9944448F1B96C98A00FFC821 /* Login_NSUD_Save.swift in Sources */,
 				993B53661B91867500AC30B5 /* WSPage_Keyboard.swift in Sources */,
 				993B536E1B91867500AC30B5 /* WSPage.swift in Sources */,

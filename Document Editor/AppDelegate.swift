@@ -19,7 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         MagicalRecord.setupCoreDataStackWithStoreNamed("Document_Editor")
-        Parse.setApplicationId("VrZQFPMrHpelCHpbSjsHbR8mvKriRrL93rPtSbiK", clientKey: "ukyOLb6HfXKWIfJspYspGmGdwz21uKxxUaB7zl76")
+        
+        Parse.setApplicationId("8KjCNNPUCbKZ5EPue3cv9LMRGa4FcCvpnQthSAzA", clientKey: "jLwzLTgJ0shLJI8tBrpkpE82gWNFr5AyRxpJt9dr")
+        
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
         

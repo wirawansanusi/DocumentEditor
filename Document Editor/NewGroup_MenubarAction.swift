@@ -14,4 +14,17 @@ extension NewGroup {
         
         performSegueWithIdentifier("unwindFromNewGroup", sender: self)
     }
+    
+    @IBAction func createButton(sender: AnyObject) {
+        
+        willPerformSubmit()
+    }
+    
+    func didPressDoneButton() {
+        
+        if let textView = currentDetailField {
+            
+            textView.resignFirstResponder()
+        }
+    }
 }

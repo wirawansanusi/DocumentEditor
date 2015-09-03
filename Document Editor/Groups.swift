@@ -6,17 +6,33 @@
 //  Copyright (c) 2015 wirawan sanusi. All rights reserved.
 //
 
-import Foundation
-import CoreData
+import UIKit
 
-@objc(Groups)
+class Groups {
 
-class Groups: NSManagedObject {
-
-    @NSManaged var id: NSNumber
-    @NSManaged var title: String
-    @NSManaged var thumbnail: NSData
-    @NSManaged var dateCreated: String
-    @NSManaged var dateJoined: String
-
+    var id          : String
+    
+    var thumbnail   : NSData?
+    var name        : String
+    var detail      : String
+    
+    var dateCreated : String
+    var dateJoined  : String
+    
+    var admin       : String
+    var members     : [String]
+    
+    init(id: String, name: String, detail: String, dateCreated: String, dateJoined: String, admin: String) {
+        
+        self.id = id
+        
+        self.name = name
+        self.detail = detail
+        
+        self.dateCreated = dateCreated
+        self.dateJoined = dateJoined
+        
+        self.admin = admin
+        self.members = [String]()
+    }
 }

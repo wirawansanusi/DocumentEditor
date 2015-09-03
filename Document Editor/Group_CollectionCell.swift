@@ -11,6 +11,6 @@ import UIKit
 class Group_CollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var thumbnail: UIImageView!
-    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var name: UILabel!
     
 }

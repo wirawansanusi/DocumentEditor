@@ -41,7 +41,7 @@ extension Dashboard: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.title.text = document.title
         let thumbnail = UIImage(data: document.thumbnail)
         cell.thumbnail.image = thumbnail
-        cell.tag = indexPath.row
+        cell.tag = Int(document.id)
         
         cell.thumbnail.layer.borderColor = UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1).CGColor
         cell.thumbnail.layer.borderWidth = 1
@@ -63,7 +63,7 @@ extension Dashboard: UICollectionViewDelegate, UICollectionViewDataSource {
             imageView.frame = self.collectionView.frame
             }) { (completion: Bool) -> Void in
                 imageView.alpha = 0.0
-                self.selectedDocumentID = indexPath.row + 1
+                self.selectedDocumentID = cell.tag
                 self.performSegueWithIdentifier("showDocumentDetail", sender: self)
         }
     }

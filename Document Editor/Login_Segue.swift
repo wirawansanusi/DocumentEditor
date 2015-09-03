@@ -15,8 +15,11 @@ extension Login {
         if segue.identifier == "showDashboard" {
             
             let tabBarController = segue.destinationViewController as! UITabBarController
-            let destination = tabBarController.viewControllers![0] as! Dashboard
-            destination.user = currentUser
+            let dashboard = tabBarController.viewControllers![0] as! Dashboard
+            let group = tabBarController.viewControllers![1] as! Group
+            
+            dashboard.user = currentUser
+            group.user = currentUser
         }
     }
     

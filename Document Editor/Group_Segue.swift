@@ -11,12 +11,17 @@ import UIKit
 extension Group {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "showNewGroup" {
+            
+            let destination = segue.destinationViewController as! NewGroup
+            destination.user = user
+        }
     }
     
     @IBAction func unwindFromNewGroup(segue: UIStoryboardSegue) {
         
-        // nothing to do here
+        loadGroups()
+        collectionView.reloadData()
     }
 }

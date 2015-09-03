@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class Group: UIViewController {
 
@@ -16,13 +17,15 @@ class Group: UIViewController {
     
     @IBOutlet weak var noticeWrapper: UIView!
     
+    var user: PFUser!
     var groups = [Groups]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         initMenubar()
-        initCollectionViewConfiguration()
+        
+        fetchAvailableGroup()
     }
     
     override func viewDidLayoutSubviews() {

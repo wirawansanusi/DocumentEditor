@@ -13,6 +13,7 @@ extension NewGroup {
     func initMenubar() {
         
         setMenubarIntoTransparent()
+        initDoneButton()
     }
     
     func setMenubarIntoTransparent() {
@@ -22,5 +23,11 @@ extension NewGroup {
         menubarWrapper.translucent = true
         menubarWrapper.backgroundColor = UIColor.clearColor()
         menubarWrapper.layer.borderWidth = 0.0
+    }
+    
+    func initDoneButton() {
+        
+        doneButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: Selector("didPressDoneButton"))
+        doneButton?.tintColor = UIColor.whiteColor()
     }
 }

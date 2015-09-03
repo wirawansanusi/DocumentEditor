@@ -45,6 +45,14 @@ extension Group: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell: Group_CollectionCell = collectionView.dequeueReusableCellWithReuseIdentifier("groupCell", forIndexPath: indexPath) as! Group_CollectionCell
+        let image = UIImage(data: groups[indexPath.row].thumbnail!)
+        
+        cell.name.text = groups[indexPath.row].name
+        cell.thumbnail.contentMode = .ScaleAspectFit
+        cell.thumbnail.image = image
+        cell.thumbnail.backgroundColor = UIColor.whiteColor()
+        cell.thumbnail.layer.cornerRadius = 20.0
+        cell.thumbnail.clipsToBounds = true
         
         return cell
     }

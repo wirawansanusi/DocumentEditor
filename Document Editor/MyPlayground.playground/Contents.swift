@@ -7,3 +7,7 @@ let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
 let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
 
 predicate.evaluateWithObject(email)
+
+let text = "fdsfdsfs df   "
+let whitespace = NSCharacterSet.whitespaceCharacterSet()
+let result = text.stringByTrimmingCharactersInSet(whitespace)
