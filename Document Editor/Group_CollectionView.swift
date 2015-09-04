@@ -45,10 +45,18 @@ extension Group: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell: Group_CollectionCell = collectionView.dequeueReusableCellWithReuseIdentifier("groupCell", forIndexPath: indexPath) as! Group_CollectionCell
-        let image = UIImage(data: groups[indexPath.row].thumbnail!)
+        
+        let imageData = groups[indexPath.row].thumbnail
+        
+        var image = UIImage(named: "Image_MediumIcon")
+        cell.thumbnail.contentMode = .Center
+        
+        if imageData != nil {
+            image = UIImage(data: imageData!)
+            cell.thumbnail.contentMode = .ScaleAspectFit
+        }
         
         cell.name.text = groups[indexPath.row].name
-        cell.thumbnail.contentMode = .ScaleAspectFit
         cell.thumbnail.image = image
         cell.thumbnail.backgroundColor = UIColor.whiteColor()
         cell.thumbnail.layer.cornerRadius = 20.0
@@ -56,4 +64,5 @@ extension Group: UICollectionViewDelegate, UICollectionViewDataSource {
         
         return cell
     }
+    
 }

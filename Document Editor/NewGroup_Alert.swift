@@ -43,6 +43,17 @@ extension NewGroup {
         presentViewController(alert, animated: true, completion: nil)
     }
     
+    func showAlertForSubmitThumbnailFailed() {
+        
+        let alert = UIAlertController(title: "Image Upload Failed", message: "An unexpected error has occurred. Group's image cannot be saved.", preferredStyle: .Alert)
+        let action = UIAlertAction(title: "Ok", style: .Default) { (alert: UIAlertAction!) -> Void in
+        }
+        
+        alert.addAction(action)
+        
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
     func showAlertForSubmitSuccess() {
         
         let alert = UIAlertController(title: "Group successfully created", message: "Congratulations! You have successfully created a group!", preferredStyle: .Alert)

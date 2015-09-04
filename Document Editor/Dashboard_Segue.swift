@@ -28,8 +28,9 @@ extension Dashboard {
             
         } else if segue.identifier == "showDocumentDetail" {
             
-            let destination = segue.destinationViewController as! DocumentBeta
-            destination.showID = selectedDocumentID
+            let destination = segue.destinationViewController as! DocumentDetail
+            destination.showId = selectedDocumentID!
+            destination.thumbnail = documents[selectionIndexPath!.row].thumbnail
             
         } else if segue.identifier == "unwindFromDashboard" {
             

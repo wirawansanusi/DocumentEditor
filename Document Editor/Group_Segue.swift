@@ -21,6 +21,11 @@ extension Group {
     
     @IBAction func unwindFromNewGroup(segue: UIStoryboardSegue) {
         
+        // nothing to do here..
+    }
+    
+    @IBAction func unwindFromNewGroupWithNewGroup(segue: UIStoryboardSegue) {
+        
         loadGroups()
         collectionView.reloadData()
     }

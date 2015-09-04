@@ -51,6 +51,8 @@ extension Dashboard: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
+        selectionIndexPath = indexPath
+        
         let cell = collectionView.cellForItemAtIndexPath(indexPath) as! Dashboard_CollectionCell
         
         let imageFrame = cell.thumbnail.frame

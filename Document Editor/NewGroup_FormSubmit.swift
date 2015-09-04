@@ -36,11 +36,18 @@ extension NewGroup {
     
     func performSubmit(name: String, detail: String) {
         
-        saveThumbnail(name, detail: detail)
+        if imageView.image != nil {
+            
+            saveGroupData(name, detail: detail, withThumbnail: true)
+            
+        } else {
+            
+            saveGroupData(name, detail: detail, withThumbnail: false)
+        }
     }
     
     func didPerformSubmit() {
         
-        performSegueWithIdentifier("unwindFromNewGroup", sender: self)
+        performSegueWithIdentifier("unwindFromNewGroupWithNewGroup", sender: self)
     }
 }

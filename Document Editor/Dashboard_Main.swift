@@ -23,6 +23,7 @@ class Dashboard: UIViewController {
     
     var viewMargin: CGFloat = 20.0
     var currentIndexPath: NSIndexPath?
+    var selectionIndexPath: NSIndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()

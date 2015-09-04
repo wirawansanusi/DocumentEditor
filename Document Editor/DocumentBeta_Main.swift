@@ -70,7 +70,7 @@ class DocumentBeta: UIViewController {
      *
      */
     
-    var showID: Int?
+    var showId: Int?
     
     /*
      * TEXTVIEW FROM SCANNED IMAGE

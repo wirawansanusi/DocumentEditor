@@ -13,6 +13,8 @@ extension Group {
     
     func fetchAvailableGroup(){
         
+        groups = [Groups]()
+        
         var query = PFQuery(className:"Groups")
         
         query.whereKey("members", equalTo: user.objectId!)
@@ -36,18 +38,34 @@ extension Group {
                         let members = object["members"] as! [String]
                         group.members = members
                         
-                        let thumbnailFile = object["thumbnail"] as! PFFile
-                        let thumbnail = thumbnailFile.getData()
-                        group.thumbnail = thumbnail
-                        
                         self.groups.append(group)
-                        self.initCollectionViewConfiguration()
                     }
+                    
+                    self.initCollectionViewConfiguration()
+                    self.didLoadGroups()
                 }
             
             } else {
                 
                 println("Error: \(error!) \(error!.userInfo!)")
+            }
+        }
+    }
+    
+    func fetchThumbnailGroup(groupThumbnail: PFObject, groupIndex: Int) {
+        
+        let thumbnailFile = groupThumbnail["thumbnail"] as! PFFile
+        thumbnailFile.getDataInBackgroundWithBlock {
+            (data: NSData?, error: NSError?) -> Void in
+            
+            if error == nil {
+                
+                if let thumbnail = data {
+                    
+                    self.groups[groupIndex].thumbnail = thumbnail
+                    self.collectionView.reloadData()
+                    
+                }
             }
         }
     }

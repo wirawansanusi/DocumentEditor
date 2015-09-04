@@ -16,13 +16,18 @@ extension DocumentBeta {
         initContainerWrapper()
         initNotificationSettings()
         
-        if let id = showID {
+        if let id = showId {
+            
             fetchObjectContext(id)
+            
             for pageContent in pagesContent {
+                
                 let index = pageContent.tag
                 updateSetting(index)
             }
+            
         } else {
+            
             updateSetting(nil)
             initObjectContext()
         }
@@ -34,19 +39,23 @@ extension DocumentBeta {
         super.viewDidLayoutSubviews()
         
         initNavbarGradient()
+        
         if !menubarHasPlayed {
+            
             showMenubar()
             menubarHasPlayed = true
         }
     }
     
     override func viewWillDisappear(animated: Bool) {
+        
         removeNotificationSettings()
         
         return super.viewWillDisappear(animated)
     }
     
     func initContainerWrapper() {
+        
         containerWrapper.frame = CGRect(origin: CGPointZero, size: view.frame.size)
     }
 }

@@ -15,4 +15,9 @@ extension Group {
         fetchAvailableGroup()
         reInitCollectionView()
     }
+    
+    func didLoadGroups() {
+        
+        searchThumbnailGroup()
+    }
 }

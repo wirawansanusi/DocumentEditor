@@ -11,29 +11,33 @@ import Parse
 
 extension NewGroup {
     
-    func saveThumbnail(name: String, detail: String) {
+    func saveThumbnail(groupId: String) {
         
+        var groupThumbnail = PFObject(className: "GroupsThumbnail")
         var thumbnail = PFFile(data: setThumbnailImage(imageView))
-        thumbnail.saveInBackgroundWithBlock {
+        
+        groupThumbnail["groupId"] = groupId
+        groupThumbnail["thumbnail"] = thumbnail
+        
+        groupThumbnail.saveInBackgroundWithBlock {
             
             (success: Bool, error: NSError?) -> Void in
             
             if success {
                 
-                self.saveGroupData(thumbnail, name: name, detail: detail)
+                self.showAlertForSubmitSuccess()
                 
             } else {
                 
-                self.showAlertForSubmitFailed()
+                self.showAlertForSubmitThumbnailFailed()
             }
         }
     }
     
-    func saveGroupData(thumbnail: PFFile, name: String, detail: String) {
+    func saveGroupData(name: String, detail: String, withThumbnail thumbnail: Bool) {
         
         var group = PFObject(className:"Groups")
         
-        group["thumbnail"] = thumbnail
         group["name"] = name
         group["detail"] = detail
         group["dateCreated"] = setDateAttribute()
@@ -47,10 +51,15 @@ extension NewGroup {
             
             if success {
                 
-                if error != nil {
-                    println(error!.userInfo)
+                if thumbnail {
+                    
+                    let groupId = group.objectId
+                    self.saveThumbnail(groupId!)
+                    
+                } else {
+                    
+                    self.showAlertForSubmitSuccess()
                 }
-                self.showAlertForSubmitSuccess()
                 
             } else {
                 
