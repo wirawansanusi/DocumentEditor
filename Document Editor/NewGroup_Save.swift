@@ -11,29 +11,6 @@ import Parse
 
 extension NewGroup {
     
-    func saveThumbnail(groupId: String) {
-        
-        var groupThumbnail = PFObject(className: "GroupsThumbnail")
-        var thumbnail = PFFile(data: setThumbnailImage(imageView))
-        
-        groupThumbnail["groupId"] = groupId
-        groupThumbnail["thumbnail"] = thumbnail
-        
-        groupThumbnail.saveInBackgroundWithBlock {
-            
-            (success: Bool, error: NSError?) -> Void in
-            
-            if success {
-                
-                self.showAlertForSubmitSuccess()
-                
-            } else {
-                
-                self.showAlertForSubmitThumbnailFailed()
-            }
-        }
-    }
-    
     func saveGroupData(name: String, detail: String, withThumbnail thumbnail: Bool) {
         
         var group = PFObject(className:"Groups")
@@ -66,7 +43,28 @@ extension NewGroup {
                 self.showAlertForSubmitFailed()
             }
         }
-        
     }
     
+    func saveThumbnail(groupId: String) {
+        
+        var groupThumbnail = PFObject(className: "GroupsThumbnail")
+        var thumbnail = PFFile(data: setThumbnailImage(imageView))
+        
+        groupThumbnail["groupId"] = groupId
+        groupThumbnail["thumbnail"] = thumbnail
+        
+        groupThumbnail.saveInBackgroundWithBlock {
+            
+            (success: Bool, error: NSError?) -> Void in
+            
+            if success {
+                
+                self.showAlertForSubmitSuccess()
+                
+            } else {
+                
+                self.showAlertForSubmitThumbnailFailed()
+            }
+        }
+    }
 }

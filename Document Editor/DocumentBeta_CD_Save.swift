@@ -14,6 +14,7 @@ extension DocumentBeta {
     func saveDocumentContext() {
         
         CDDocument!.title = documentTitle.text
+        CDDocument!.order = setDocumentOrderAttribute(NSDate())!
         
         commitDB()
     }

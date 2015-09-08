@@ -17,14 +17,13 @@ extension DocumentBeta {
         
         CDDocument = Documents.MR_createEntity()
     
-        let id = Documents.MR_numberOfEntities()
+        let id = String.generateDocumentId()
         documentId = id
         
         CDDocument!.id = documentId!
-        CDDocument!.order = documentId!
         CDDocument!.authorId = user.objectId!
         CDDocument!.userId = user.objectId!
-        CDDocument!.title = "Untitled Document \(Int(documentId!))"
+        CDDocument!.title = "Untitled Document"
         
         setDocumentDateAttribute(onInit: true)
         setDocumentThumbnailImage()

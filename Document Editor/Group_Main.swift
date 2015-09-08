@@ -19,12 +19,12 @@ class Group: UIViewController {
     
     var user: PFUser!
     var groups = [Groups]()
+    var selectedGroup: Groups?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         initMenubar()
-        
         fetchAvailableGroup()
     }
     

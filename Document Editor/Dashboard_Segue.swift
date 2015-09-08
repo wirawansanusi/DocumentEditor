@@ -29,6 +29,7 @@ extension Dashboard {
         } else if segue.identifier == "showDocumentDetail" {
             
             let destination = segue.destinationViewController as! DocumentDetail
+            destination.user = user
             destination.showId = selectedDocumentID!
             destination.thumbnail = documents[selectionIndexPath!.row].thumbnail
             
@@ -42,8 +43,12 @@ extension Dashboard {
     
     @IBAction func unwindFromNewDocument(segue: UIStoryboardSegue) {
         
-        loadDocuments()
-        collectionView.reloadData()
+        // nothing to do here..
+    }
+    
+    @IBAction func unwindFromDocumentDetail(segue: UIStoryboardSegue) {
+        
+        // nothing to do here..
     }
 
     @IBAction func unwindFromDocumentBeta(segue: UIStoryboardSegue) {

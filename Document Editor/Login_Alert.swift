@@ -36,9 +36,20 @@ extension Login {
         }
     }
     
+    func showAlertForConnectionTimeOut() {
+        
+        let alert = UIAlertController(title: "Connection Time Out", message: "It appears there's no internet connection. Please try again.", preferredStyle: .Alert)
+        let action = UIAlertAction(title: "Ok", style: .Default) { (alert: UIAlertAction!) -> Void in
+        }
+        
+        alert.addAction(action)
+        
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
     func showAlertForLoginFailed() {
         
-        let alert = UIAlertController(title: "Connection Error", message: "Oops, looks like there's some problem here, please try again", preferredStyle: .Alert)
+        let alert = UIAlertController(title: "Connection Error", message: "Oops, looks like there's some problem here. Please try again", preferredStyle: .Alert)
         let action = UIAlertAction(title: "Ok", style: .Default) { (alert: UIAlertAction!) -> Void in
         }
         

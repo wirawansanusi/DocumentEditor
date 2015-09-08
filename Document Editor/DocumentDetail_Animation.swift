@@ -25,7 +25,8 @@ extension DocumentDetail {
         
         UIView.animateWithDuration(0.5, animations: { () -> Void in
             
-            self.thumbnailContainer.frame.origin.y += 62
+            self.thumbnailContainer.frame.origin.y += 62 // status bar height
+            
             self.infoContainer.frame.origin.y = self.view.bounds.size.height
             }) { (success: Bool) -> Void in
                 

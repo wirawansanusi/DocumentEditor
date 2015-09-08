@@ -37,8 +37,13 @@ extension Login {
                 
             } else {
                 
+                // Connection time out parametes
+                if error!.code == 100 {
+                    
+                    self.showAlertForConnectionTimeOut()
+                
                 // Invalid Login parameters
-                if error!.code == 101 {
+                } else if error!.code == 101 {
                     
                     self.showAlertForIncorrectLoginInformation()
                     

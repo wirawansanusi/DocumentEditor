@@ -16,6 +16,17 @@ extension DocumentDetail {
             
             let destination = segue.destinationViewController as! DocumentBeta
             destination.showId = showId
+            
+        } else if segue.identifier == "showGroupSelection" {
+                
+            let destination = segue.destinationViewController as! GroupSelection
+            destination.user = user
+            destination.documentId = showId
         }
+    }
+    
+    @IBAction func unwindFromGroupSelection(segue: UIStoryboardSegue) {
+        
+        // nothing to do here..
     }
 }

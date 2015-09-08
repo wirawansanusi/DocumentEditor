@@ -1,5 +1,5 @@
 //
-//  DocumentDetail_CD_Fetch.swift
+//  DocumentDetail_Menubar.swift
 //  Document Editor
 //
 //  Created by wirawan sanusi on 9/4/15.
@@ -10,8 +10,8 @@ import UIKit
 
 extension DocumentDetail {
     
-    func fetchObjectContext(id: String) {
+    @IBAction func didPressBackButton(sender: AnyObject) {
         
-        CDDocument = Documents.MR_findFirstByAttribute("id", withValue: id)
+        performSegueWithIdentifier("unwindFromDocumentDetail", sender: self)
     }
 }

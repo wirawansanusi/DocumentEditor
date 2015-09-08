@@ -14,4 +14,9 @@ extension DocumentDetail {
         
         slideOutInfoContainer()
     }
+    
+    func didPressUploadGroupAction(recognizer: UITapGestureRecognizer) {
+        
+        performSegueWithIdentifier("showGroupSelection", sender: self)
+    }
 }

@@ -19,7 +19,7 @@ class Dashboard: UIViewController {
     var user: PFUser!
     
     var documents = [Documents]()
-    var selectedDocumentID: Int?
+    var selectedDocumentID: String?
     
     var viewMargin: CGFloat = 20.0
     var currentIndexPath: NSIndexPath?

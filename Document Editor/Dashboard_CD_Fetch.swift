@@ -15,6 +15,6 @@ extension Dashboard {
         
         let userId = user.objectId
         let predicate = NSPredicate(format: "userId IN %@", [userId!])
-        documents = Documents.MR_findAllSortedBy("order", ascending: true, withPredicate: predicate) as! [Documents]
+        documents = Documents.MR_findAllSortedBy("order", ascending: false, withPredicate: predicate) as! [Documents]
     }
 }

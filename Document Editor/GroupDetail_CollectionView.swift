@@ -1,30 +1,19 @@
 //
-//  Group_CollectionView.swift
+//  GroupDetail_CollectionView.swift
 //  Document Editor
 //
-//  Created by wirawan sanusi on 9/2/15.
+//  Created by wirawan sanusi on 9/7/15.
 //  Copyright (c) 2015 wirawan sanusi. All rights reserved.
 //
 
 import UIKit
 
-extension Group: UICollectionViewDelegate, UICollectionViewDataSource {
+extension GroupDetail: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func initCollectionViewConfiguration() {
         
-        if groups.count > 0 {
-            
-            noticeWrapper.alpha = 0.0
-            
-            collectionView.delegate = self
-            collectionView.dataSource = self
-            collectionView.contentInset = UIEdgeInsetsMake(20.0, 0, 20.0, 0)
-            collectionView.showsVerticalScrollIndicator = false
-            
-        } else {
-            
-            collectionView.alpha = 0
-        }
+        collectionView.dataSource = self
+        collectionView.delegate = self
     }
     
     func reInitCollectionView() {
@@ -39,14 +28,14 @@ extension Group: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return groups.count
+        return documents.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell: Group_CollectionCell = collectionView.dequeueReusableCellWithReuseIdentifier("groupCell", forIndexPath: indexPath) as! Group_CollectionCell
+        let cell: GroupDetail_CollectionCell = collectionView.dequeueReusableCellWithReuseIdentifier("documentCell", forIndexPath: indexPath) as! GroupDetail_CollectionCell
         
-        let imageData = groups[indexPath.row].thumbnail
+        let imageData = documents[indexPath.row].thumbnail
         
         var image = UIImage(named: "Image_MediumIcon")
         cell.thumbnail.contentMode = .Center
@@ -56,10 +45,8 @@ extension Group: UICollectionViewDelegate, UICollectionViewDataSource {
             cell.thumbnail.contentMode = .ScaleAspectFit
         }
         
-        cell.name.text = groups[indexPath.row].name
+        cell.usernameLabel.text = documents[indexPath.row].title
         cell.thumbnail.image = image
-        cell.thumbnail.backgroundColor = UIColor.whiteColor()
-        cell.thumbnail.layer.cornerRadius = 20.0
         cell.thumbnail.clipsToBounds = true
         
         return cell
@@ -67,7 +54,8 @@ extension Group: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
-        selectedGroup = groups[indexPath.row]
-        performSegueWithIdentifier("showGroupDetail", sender: self)
+        showActionSheetForSelectingDocument(indexPath.row)
     }
+    
+    
 }

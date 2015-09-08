@@ -3,7 +3,7 @@
     <entity name="Documents" representedClassName="Documents" syncable="YES">
         <attribute name="authorId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateCreated" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastUpdated" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="thumbnail" optional="YES" attributeType="Binary" syncable="YES"/>
@@ -21,7 +21,7 @@
     <entity name="PageImages" representedClassName="PageImages" syncable="YES">
         <attribute name="backwardToggle" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="data" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
-        <attribute name="documentId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="documentId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="originX" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="originY" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="pageId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -29,7 +29,7 @@
         <relationship name="pages" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pages" inverseName="pageImages" inverseEntity="Pages" syncable="YES"/>
     </entity>
     <entity name="Pages" representedClassName="Pages" syncable="YES">
-        <attribute name="documentId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="documentId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="Binary" syncable="YES"/>
         <relationship name="documents" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Documents" inverseName="pages" inverseEntity="Documents" syncable="YES"/>
@@ -37,8 +37,8 @@
     </entity>
     <elements>
         <element name="Documents" positionX="-63" positionY="-18" width="128" height="180"/>
+        <element name="Groups" positionX="-45" positionY="81" width="128" height="120"/>
         <element name="PageImages" positionX="-54" positionY="45" width="128" height="165"/>
         <element name="Pages" positionX="-54" positionY="9" width="128" height="120"/>
-        <element name="Groups" positionX="-45" positionY="81" width="128" height="120"/>
     </elements>
 </model>

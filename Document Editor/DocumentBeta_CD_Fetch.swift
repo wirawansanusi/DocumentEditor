@@ -10,7 +10,7 @@ import UIKit
 
 extension DocumentBeta {
     
-    func fetchObjectContext(id: Int) {
+    func fetchObjectContext(id: String) {
         
         CDDocument = Documents.MR_findFirstByAttribute("id", withValue: id)
         let CDPages = Pages.MR_findByAttribute("documentId", withValue: id) as! [Pages]
@@ -33,7 +33,7 @@ extension DocumentBeta {
         fetchImagesContext(id)
     }
     
-    func fetchImagesContext(id: Int) {
+    func fetchImagesContext(id: String) {
         
         let CDImages = PageImages.MR_findByAttribute("documentId", withValue: id) as! [PageImages]
         
@@ -56,10 +56,5 @@ extension DocumentBeta {
             
             self.CDImages.addObject(CDImage)
         }
-    }
-    
-    func fetchAndDeleteExistingImages(id: Int) {
-        
-        
     }
 }

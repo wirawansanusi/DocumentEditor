@@ -38,7 +38,7 @@ class DocumentBeta: UIViewController {
     var CDImages: NSMutableOrderedSet = NSMutableOrderedSet()
     var CDImage: PageImages?
     
-    var documentId: NSNumber?
+    var documentId: String?
     
     /*
      * MENUBAR
@@ -70,7 +70,7 @@ class DocumentBeta: UIViewController {
      *
      */
     
-    var showId: Int?
+    var showId: String?
     
     /*
      * TEXTVIEW FROM SCANNED IMAGE

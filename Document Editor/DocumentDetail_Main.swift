@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import Parse
 
 class DocumentDetail: UIViewController {
 
     @IBOutlet weak var thumbnailContainer: UIView!
     @IBOutlet weak var infoContainer: UIView!
     
-    var showId: Int!
+    var user: PFUser!
+    
+    var showId: String!
     var thumbnail: NSData!
     var imageView: UIImageView?
     

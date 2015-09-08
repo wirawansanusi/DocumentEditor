@@ -13,6 +13,7 @@ extension DocumentDetail {
     func initRecognizer() {
         
         initThumbnailTapRecognizer()
+        initUploadGroupActionRecgonizer()
     }
     
     func initThumbnailTapRecognizer() {
@@ -20,5 +21,12 @@ extension DocumentDetail {
         let recognizer = UITapGestureRecognizer(target: self, action: Selector("didPressThumbnail:"))
         
         thumbnailContainer.addGestureRecognizer(recognizer)
+    }
+    
+    func initUploadGroupActionRecgonizer() {
+        
+        let recognizer = UITapGestureRecognizer(target: self, action: Selector("didPressUploadGroupAction:"))
+        
+        uploadGroupAction.addGestureRecognizer(recognizer)
     }
 }

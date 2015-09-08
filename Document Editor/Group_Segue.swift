@@ -16,6 +16,11 @@ extension Group {
             
             let destination = segue.destinationViewController as! NewGroup
             destination.user = user
+            
+        } else if segue.identifier == "showGroupDetail" {
+            
+            let destination = segue.destinationViewController as! GroupDetail
+            destination.group = selectedGroup
         }
     }
     
@@ -28,5 +33,10 @@ extension Group {
         
         loadGroups()
         collectionView.reloadData()
+    }
+    
+    @IBAction func unwindFromGroupDetail(segue: UIStoryboardSegue) {
+        
+        // nothing to do here..
     }
 }
